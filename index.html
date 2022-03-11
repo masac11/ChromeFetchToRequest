@@ -15,24 +15,30 @@
                 <span class="fs-4">Simple fetch to request</span>
             </a>
         </header>
-        <div class="container-fluid pb-3">
-            <div class="d-grid gap-3" style="grid-template-columns: 1fr 1fr;">
-                <div class="mb-3 ">
-                    <div class="form-text">Chrome copy as fetch</div>
-                    <textarea type="email" class="form-control" style="height: 100%;"></textarea>
-                </div>
-                <div class="mb-3">
-                    <div class="form-text">Python request</div>
-                    <textarea type="email" class="form-control" style="height: 100%;"></textarea>
-                </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-text">Chrome copy as fetch</div>
+                <textarea style="height: 30vw;" id="fetch_content" class="form-control"
+                    style="height: 100%;"></textarea>
             </div>
-            <br/>
-            <button type="submit" class="btn btn-primary" onclick="change()">Change</button>
+            <div class="col-6">
+                <div class="form-text">Python request</div>
+                <textarea style="height: 30vw;" id="request_content" class="form-control"
+                    style="height: 100%;"></textarea>
+            </div>
         </div>
+    </div>
+    <div class="container" style="padding-top: 1;">
+        <br />
+        <button type="submit" class="btn btn-primary" onclick="change()">Change</button>
+        <button type="submit" class="btn btn-primary" onclick="copy()">Copy</button>
     </div>
 
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
+    <script src="assets/dist/js/jquery.json.js"></script>
 </body>
 
 </html>
