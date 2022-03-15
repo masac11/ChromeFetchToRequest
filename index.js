@@ -7,11 +7,11 @@ function change() {
         method = json_obj.method;
         body = json_obj.body;
         headers = new JSONFormat(headers, 8).toString();
-        var request_content = 'url = "' + url + '"\r' + 'headers = ' + headers + '\r';
+        var request_content = 'url = \'' + url + '\'\r' + 'headers = ' + headers + '\r';
         if (method == "GET") {
             request_content += 'r = requests.get(url = url, headers = headers)'
         } else if (method == "POST") {
-            request_content += 'data = "' + body + '"\r' + 'r = requests.get(url = url, data = data, headers = headers)'
+            request_content += 'data = \'' + body + '\'\r' + 'r = requests.post(url = url, data = data, headers = headers)'
         }
         document.getElementById("request_content").value = request_content;
     } catch (error) {
