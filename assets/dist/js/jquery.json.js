@@ -31,11 +31,11 @@ var JSONFormat = (function () {
     }
 
     function _format_boolean(object) {
-        return '"' + object + '"';
+        return '\'' + object + '\'';
     }
 
     function _format_number(object) {
-        return '"' + object + '"';
+        return '\'' + object + '\'';
     }
 
     function _format_string(object) {
@@ -44,7 +44,7 @@ var JSONFormat = (function () {
         if (0 <= object.search(/^http/)) {
             object = '<a href="' + object + '" target="_blank">' + object + '</a>'
         }
-        return '"' + object + '"';
+        return '\'' + object + '\'';
     }
 
 
